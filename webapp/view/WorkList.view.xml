@@ -1,0 +1,63 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified"
+	controllerName="rt.rfq.appRFQMassUpload.controller.WorkList" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="RFQ Mass Upload">
+		<VBox>
+			<FlexBox alignItems="Center" justifyContent="Center">
+				<u:FileUploader id="fileUploader" name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server"
+					uploadComplete="handleUploadComplete" change="handleValueChange" typeMissmatch="handleTypeMissmatch" style="Emphasized" fileType="xlsx"
+					placeholder="Choose a file for Upload...">
+					<u:parameters>
+						<u:FileUploaderParameter name="param1" value="Foo"/>
+						<u:FileUploaderParameter name="param2" value="bar"/>
+					</u:parameters>
+					<u:headerParameters>
+						<u:FileUploaderParameter name="headerParam1" value="Foo"/>
+						<u:FileUploaderParameter name="headerParam2" value="bar"/>
+					</u:headerParameters>
+				</u:FileUploader>
+				<Button text="Upload File" press="handleUploadPress"/>
+			</FlexBox>
+			<!--<content>-->
+			<Table mode="MultiSelect" busyIndicatorDelay="0" busy="{view>/busy}" items="{rfq>/}" noDataText="Please add new product" id="_rfqList"
+				fixedLayout="false">
+				<columns>
+					<Column>
+						<Text text="RFQ Number"/>
+					</Column>
+					<Column>
+						<Text text="RFQ Type"/>
+					</Column>
+					<Column>
+						<Text text="Company Code"/>
+					</Column>
+					<Column>
+						<Text text="Item No"/>
+					</Column>
+					<Column>
+						<Text text="Material"/>
+					</Column>
+					<Column>
+						<Text text="Price"/>
+					</Column>
+					<Column>
+						<Text text="Currency"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Input value="{rfq>RFQNo}"/>
+							<Input value="{rfq>RFQType}"/>
+							<Input value="{rfq>CCode}"/>
+							<Input value="{rfq>ItemNo}"/>
+							<Input value="{rfq>Material}"/>
+							<Input value="{rfq>Price}"/>
+							<Input value="{rfq>Currency}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			<!--</content>-->
+		</VBox>
+	</Page>
+</mvc:View>

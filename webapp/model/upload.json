@@ -1,0 +1,33 @@
+{
+	"header": [{
+		"RFQ number": "70000001",
+		"RFQ Type": "RF",
+		"Company code": "Y100",
+		"items": [{
+			"Item No": 1,
+			"Material": "1000001",
+			"Price": 50000,
+			"Currency": "VND"
+		}, {
+			"Item No": 2,
+			"Material": "1000002",
+			"Price": 230000,
+			"Currency": "VND"
+		}]
+	}, {
+		"RFQ number": "70000001",
+		"RFQ Type": "RF",
+		"Company code": "Y100",
+		"items": [{
+			"Item No": 1,
+			"Material": "1000001",
+			"Price": 50000,
+			"Currency": "VND"
+		}, {
+			"Item No": 2,
+			"Material": "1000002",
+			"Price": 230000,
+			"Currency": "VND"
+		}]
+	}]
+}
